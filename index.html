@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario de registro de visitantes para el edificio corporativo CorpSolutions S.A. Proyecto académico de Diseño Web y Comercio Electrónico.">
+    <meta name="keywords" content="Registro, Visitantes, CorpSolutions, Diseño Web, Comercio Electrónico, Javascript, CSS, HTML">
+    <meta name="author" content="Grupo 3 - Cristian Gago, Manuel López">
+    <title>Registro de Visitantes - CorpSolutions S.A.</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Registro de Visitantes - CorpSolutions S.A.</h1>
+    </header>
+
+    <section id="visitorRegistrySection">
+        
+        <form id="visitorRegistryForm">
+            <div class="input-group">
+                <label for="cedula">Cédula:</label>
+                <input type="text" id="cedula" name="cedula" required/>
+            </div>
+
+            <div class="input-group">
+                <label for="nombres">Nombres:</label>
+                <input type="text" id="nombre" name="nombre" required/>
+            </div>
+
+            <div class="input-group">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellido" name="apellido" required/>
+            </div>
+
+            <div class="input-group">
+                <label for="departamento">Departamento visitado:</label>
+                <select id="departamento" name="departamento" required>
+                    <option value="" disabled selected hidden>-- Seleccione una de las opciones --</option>
+                    <option value="Ventas">Ventas</option>
+                    <option value="Crédito">Crédito</option>
+                    <option value="Recursos Humanos">Recursos Humanos</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="motivo">Motivo de la visita:</label>
+                <textarea id="motivo" name="motivo" rows="4" required></textarea>
+            </div>
+
+            <div class="post-button">
+                <button type="submit" id="submitButton">Registrar Visitante</button>
+            </div>
+        </form>
+    </section>
+
+    <section id="visitorListSection">
+        <h2>Lista de Visitantes</h2>
+        <table id="visitorListTable">
+            <thead>
+                <tr>
+                    <th>Cedula</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Departamento</th>
+                    <th>Motivo</th>
+                    <th>Fecha de Registro</th>
+                </tr>
+            </thead>
+            <tbody id="visitorListBody">
+            
+            </tbody>
+        </table>
+
+        <footer>
+            <p>&copy; 2025 CorpSolutions S.A. Todos los derechos reservados.</p>
+            <p>Desarrollado por Grupo 3 - Cristian Gago, Manuel López</p>
+        </footer>
+
+    </section>
+</body>
