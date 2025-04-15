@@ -1,0 +1,25 @@
+Index: index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <meta name=\"description\" content=\"Formulario de registro de visitantes para el edificio corporativo CorpSolutions S.A. Proyecto académico de Diseño Web y Comercio Electrónico.\">\r\n    <meta name=\"keywords\" content=\"Registro, Visitantes, CorpSolutions, Diseño Web, Comercio Electrónico, Javascript, CSS, HTML\">\r\n    <meta name=\"author\" content=\"Grupo 3 - Cristian Gago, Manuel López\">\r\n    <title>Registro de Visitantes - CorpSolutions S.A.</title>\r\n    <link rel=\"stylesheet\" href=\"css/styles.css\">\r\n</head>\r\n\r\n<body>\r\n    <header>\r\n        <h1>Registro de Visitantes - CorpSolutions S.A.</h1>\r\n    </header>\r\n\r\n    <section id=\"visitorRegistrySection\">\r\n        \r\n        <form id=\"visitorRegistryForm\">\r\n            <div class=\"input-group\">\r\n                <label for=\"cedula\">Cédula:</label>\r\n                <input type=\"text\" id=\"cedula\" name=\"cedula\" required/>\r\n            </div>\r\n\r\n            <div class=\"input-group\">\r\n                <label for=\"nombres\">Nombres:</label>\r\n                <input type=\"text\" id=\"nombre\" name=\"nombre\" required/>\r\n            </div>\r\n\r\n            <div class=\"input-group\">\r\n                <label for=\"apellidos\">Apellidos:</label>\r\n                <input type=\"text\" id=\"apellido\" name=\"apellido\" required/>\r\n            </div>\r\n\r\n            <div class=\"input-group\">\r\n                <label for=\"departamento\">Departamento visitado:</label>\r\n                <select id=\"departamento\" name=\"departamento\" required>\r\n                    <option value=\"\" disabled selected hidden>-- Seleccione una de las opciones --</option>\r\n                    <option value=\"Ventas\">Ventas</option>\r\n                    <option value=\"Crédito\">Crédito</option>\r\n                    <option value=\"Recursos Humanos\">Recursos Humanos</option>\r\n                </select>\r\n            </div>\r\n\r\n            <div class=\"input-group\">\r\n                <label for=\"motivo\">Motivo de la visita:</label>\r\n                <textarea id=\"motivo\" name=\"motivo\" rows=\"4\" required></textarea>\r\n            </div>\r\n\r\n            <div class=\"post-button\">\r\n                <button type=\"submit\" id=\"submitButton\">Registrar Visitante</button>\r\n            </div>\r\n        </form>\r\n    </section>\r\n\r\n    <section id=\"visitorListSection\">\r\n        <h2>Lista de Visitantes</h2>\r\n        <table id=\"visitorListTable\">\r\n            <thead>\r\n                <tr>\r\n                    <th>Cedula</th>\r\n                    <th>Nombre</th>\r\n                    <th>Apellido</th>\r\n                    <th>Departamento</th>\r\n                    <th>Motivo</th>\r\n                    <th>Fecha de Registro</th>\r\n                </tr>\r\n            </thead>\r\n            <tbody id=\"visitorListBody\">\r\n            \r\n            </tbody>\r\n        </table>\r\n\r\n        <footer>\r\n            <p>&copy; 2025 CorpSolutions S.A. Todos los derechos reservados.</p>\r\n            <p>Desarrollado por Grupo 3 - Cristian Gago, Manuel López</p>\r\n        </footer>\r\n\r\n    </section>\r\n</body>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/index.html b/index.html
+--- a/index.html	(revision d7148fcfab5fa6939c7b1a5fd9584b4ff448f08d)
++++ b/index.html	(date 1744677509715)
+@@ -24,12 +24,12 @@
+             </div>
+ 
+             <div class="input-group">
+-                <label for="nombres">Nombres:</label>
++                <label for="nombre">Nombres:</label>
+                 <input type="text" id="nombre" name="nombre" required/>
+             </div>
+ 
+             <div class="input-group">
+-                <label for="apellidos">Apellidos:</label>
++                <label for="apellido">Apellidos:</label>
+                 <input type="text" id="apellido" name="apellido" required/>
+             </div>
+ 

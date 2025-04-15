@@ -1,0 +1,142 @@
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    background: linear-gradient(135deg, #f0f0f0, #ffffff);
+    color: #333;
+    line-height: 1.6;
+    padding: 30px;
+}
+
+
+header {
+    background: linear-gradient(90deg, #283048, #859398);
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 32px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+section {
+    background: #fff;
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#visitorRegistryForm {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Resalta el campo activo con color y sombra */
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: #6c63ff;
+    box-shadow: 0 0 8px rgb(69, 64, 156);
+}
+
+.post-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.post-button button {
+    background: linear-gradient(90deg, #6c63ff, #3f3d56);
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.post-button button:hover {
+    background: linear-gradient(90deg, #3f3d56, #6c63ff);
+}
+
+/* Sección de lista de visitantes con títulos destacados */
+#visitorListSection {
+    margin-top: 50px;
+}
+
+#visitorListSection h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: #333;
+}
+
+/* Tabla de visitantes con celdas amplias y filas alternadas para mejor legibilidad */
+#visitorListTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#visitorListTable th,
+#visitorListTable td {
+    padding: 15px;
+    border: 1px solid #eee;
+    text-align: left;
+}
+
+#visitorListTable th {
+    background: #6c63ff;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#visitorListTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Pie de página con línea divisoria */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #777;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
