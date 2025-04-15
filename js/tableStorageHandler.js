@@ -6,13 +6,11 @@ function saveVisitor(visitor) {
     addRow(visitor);
   }
   
-  // Display saved visitors on page load
   function showVisitors() {
     const visitors = JSON.parse(localStorage.getItem("visitors")) || [];
     visitors.forEach(addRow);
   }
   
-  // Add a row to the table
   function addRow(visitor) {
     const tbody = document.getElementById("visitorListBody");
     const row = document.createElement("tr");
