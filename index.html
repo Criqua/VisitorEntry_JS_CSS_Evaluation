@@ -8,6 +8,9 @@
     <meta name="author" content="Grupo 3 - Cristian Gago, Manuel López">
     <title>Registro de Visitantes - CorpSolutions S.A.</title>
     <link rel="stylesheet" href="css/styles.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/2af02d949f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -16,36 +19,56 @@
     </header>
 
     <section id="visitorRegistrySection">
-        
+
         <form id="visitorRegistryForm">
             <div class="input-group">
-                <label for="cedula">Cédula:</label>
-                <input type="text" id="cedula" name="cedula" required/>
+                <label for="cedula">Cédula</label>
+                <input type="text" id="cedula" name="cedula"/>
+                <div class="error-msg" id="errorCedula">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <span></span>
+                </div>                  
             </div>
 
             <div class="input-group">
-                <label for="nombre">Nombres:</label>
-                <input type="text" id="nombre" name="nombre" required/>
+                <label for="nombre">Nombres</label>
+                <input type="text" id="nombre" name="nombre"/>
+                <div class="error-msg" id="errorNombre">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <span></span>
+                </div>             
             </div>
 
             <div class="input-group">
-                <label for="apellido">Apellidos:</label>
-                <input type="text" id="apellido" name="apellido" required/>
+                <label for="apellido">Apellidos</label>
+                <input type="text" id="apellido" name="apellido"/>
+                <div class="error-msg" id="errorApellido">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <span></span>
+                </div>             
             </div>
 
             <div class="input-group">
                 <label for="departamento">Departamento visitado:</label>
-                <select id="departamento" name="departamento" required>
-                    <option value="" disabled selected hidden>-- Seleccione una de las opciones --</option>
+                <select id="departamento" name="departamento">
+                    <option value="" disabled selected hidden>Seleccione una de las opciones</option>
                     <option value="Ventas">Ventas</option>
                     <option value="Crédito">Crédito</option>
                     <option value="Recursos Humanos">Recursos Humanos</option>
                 </select>
+                <div class="error-msg" id="errorDepartamento">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <span></span>
+                </div>             
             </div>
 
             <div class="input-group">
-                <label for="motivo">Motivo de la visita:</label>
-                <textarea id="motivo" name="motivo" rows="4" required></textarea>
+                <label for="motivo">Motivo de la visita</label>
+                <textarea id="motivo" name="motivo" rows="4" style="resize: none;"></textarea>
+                <div class="error-msg" id="errorMotivo">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <span></span>
+                </div>             
             </div>
 
             <div class="post-button">
@@ -67,15 +90,16 @@
                     <th>Fecha de Registro</th>
                 </tr>
             </thead>
-            <tbody id="visitorListBody">
-            
-            </tbody>
+            <tbody id="visitorListBody"></tbody>
         </table>
 
         <footer>
             <p>&copy; 2025 CorpSolutions S.A. Todos los derechos reservados.</p>
-            <p>Desarrollado por Grupo 3 - Cristian Gago, Manuel López</p>
+            <p>Desarrollado por el Grupo C - Cristian Gago, Manuel López</p>
         </footer>
 
+        <script src="js/tableStorageHandler.js"></script>
+        <script src="js/validators.js"></script>
     </section>
 </body>
+</html>

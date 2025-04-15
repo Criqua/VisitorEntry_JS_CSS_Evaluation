@@ -131,6 +131,24 @@ section {
     background-color: #f9f9f9;
 }
 
+.error-msg {
+    display: none;
+    align-items: center;
+    gap: 10px;
+    color: #dc2626;
+    font-size: 0.9em;
+    margin-top: 5px;
+    background-color: #fef2f2;
+    padding: 8px 12px;
+    border: 1px solid #fca5a5;
+    border-radius: 6px;
+  }
+  
+  .error-msg.active {
+    display: flex;
+  }  
+
+
 /* Pie de página con línea divisoria */
 footer {
     text-align: center;
