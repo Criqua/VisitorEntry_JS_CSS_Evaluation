@@ -11,12 +11,21 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://kit.fontawesome.com/2af02d949f.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <h1>Registro de Visitantes - CorpSolutions S.A.</h1>
-    </header>
+    <header class="floating-header">
+        <div class="header-icon-wrapper">
+          <div class="header-icon-circle">
+            <i class="fa-solid fa-building"></i>
+          </div>
+        </div>
+        <div class="header-card">
+          <h1>CorpSolutions S.A.</h1>
+          <p>Registro de visitantes</p>
+        </div>
+      </header>
 
     <section id="visitorRegistrySection">
 
@@ -95,8 +104,13 @@
 
         <footer>
             <p>&copy; 2025 CorpSolutions S.A. Todos los derechos reservados.</p>
-            <p>Desarrollado por el Grupo C - Cristian Gago, Manuel López</p>
-        </footer>
+            <p>
+                Desarrollado por el Grupo C<br>
+                <i class="fa-solid fa-star"></i> 
+                <span> Cristian Gago - Manuel López - María Aguilar </span>
+                <i class="fa-solid fa-star"></i>
+            </p>
+        </footer>              
 
         <script src="js/tableStorageHandler.js"></script>
         <script src="js/validators.js"></script>

@@ -1,155 +1,219 @@
-/* Reseteo básico */
-* {
+/* Reset básico y tipografía */
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
 }
-
+  
+  /* Estilos generales */
 body {
-    font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
     font-size: 16px;
-    background: linear-gradient(135deg, #f0f0f0, #ffffff);
+    background: linear-gradient(135deg, #eef2f3, #ffffff);
     color: #333;
     line-height: 1.6;
-    padding: 30px;
+    padding: 5px;
 }
-
-header {
-    background: linear-gradient(90deg, #283048, #859398);
-    color: #fff;
-    padding: 30px 0;
+  
+/* --- Encabezado flotante con ícono central --- */
+.floating-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -20px;
+}
+  
+.header-icon-wrapper {
+    position: relative;
+    z-index: 2;
+}
+  
+.header-icon-circle {
+    background: #6c63ff;
+    color: white;
+    font-size: 28px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(108, 99, 255, 0.4);
+    transform: translateY(50%);
+}
+  
+.header-card {
+    background: linear-gradient(90deg, #3b3b98, #6c63ff);
+    color: white;
+    max-width: 900px;
+    width: 100%;
+    padding: 50px 20px 30px;
+    border-radius: 12px 12px 0 0;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 1;
+    border: 1px solid #e0e0e0;
 }
-
-header h1 {
-    font-size: 32px;
-    letter-spacing: 1px;
+  
+.header-card h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
-
+  
+.header-card p {
+    font-size: 16px;
+}
+  
+/* Sección principal del formulario */
 section {
     background: #fff;
-    margin-top: 30px;
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px 12px 12px 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 0 auto 40px;
 }
-
+  
+/* Formulario */
 #visitorRegistryForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     max-width: 700px;
     margin: 0 auto;
 }
-
+  
 .input-group {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 20px;
 }
-
+  
 .input-group label {
-    display: block;
     font-weight: 600;
     margin-bottom: 8px;
-    color: #555;
+    color: #444;
 }
-
+  
 .input-group input,
 .input-group select,
 .input-group textarea {
     width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
+    padding: 14px 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
     font-size: 16px;
+    background-color: #f9f9f9;
     transition: all 0.3s ease;
 }
-
-/* Resalta el campo activo con color y sombra */
+  
 .input-group input:focus,
 .input-group select:focus,
 .input-group textarea:focus {
-    outline: none;
     border-color: #6c63ff;
-    box-shadow: 0 0 8px rgb(69, 64, 156);
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(108, 99, 255, 0.3);
+    outline: none;
 }
-
+  
+textarea {
+    resize: none;
+}
+  
+/* Botón moderno */
 .post-button {
     text-align: center;
-    margin-top: 30px;
 }
 
 .post-button button {
-    background: linear-gradient(90deg, #6c63ff, #3f3d56);
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
     color: #fff;
-    border: none;
-    padding: 15px 30px;
+    padding: 15px 35px;
     font-size: 18px;
-    border-radius: 30px;
+    border: none;
+    border-radius: 12px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.2s;
+    font-weight: 600;
 }
 
 .post-button button:hover {
-    background: linear-gradient(90deg, #3f3d56, #6c63ff);
+    background: linear-gradient(90deg, #2a5298, #1e3c72);
+    transform: scale(1.05);
 }
-
-/* Sección de lista de visitantes con títulos destacados */
+  
+/* Sección de lista de visitantes */
 #visitorListSection {
     margin-top: 50px;
 }
-
+  
 #visitorListSection h2 {
     text-align: center;
     margin-bottom: 25px;
     font-size: 28px;
-    color: #333;
+    color: #1e3c72;
 }
-
-/* Tabla de visitantes con celdas amplias y filas alternadas para mejor legibilidad */
+  
 #visitorListTable {
     width: 100%;
     border-collapse: collapse;
-    overflow-x: auto; /* Permite el desplazamiento horizontal en pantallas pequeñas */
+    overflow-x: auto;
 }
-
+  
 #visitorListTable th,
 #visitorListTable td {
     padding: 15px;
-    border: 1px solid #eee;
+    border: 1px solid #ddd;
     text-align: left;
 }
-
+  
 #visitorListTable th {
-    background: #6c63ff;
+    background: #1e3c72;
     color: #fff;
-    font-size: 16px;
+    font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
-
+  
 #visitorListTable tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-/* Responsividad para pantallas pequeñas */
-@media (max-width: 768px) {
-    #visitorListTable {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-
-    #visitorListTable th,
-    #visitorListTable td {
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    #visitorListTable th {
-        font-size: 14px;
-        text-align: center;
-    }
+/* 
+    Cuando los mensajes de la columna "motivo" sean grandes, 
+    se envolverán para mantener el tamaño consistente 
+*/
+#visitorListTable td:nth-child(5) { 
+    max-width: 250px;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    cursor: pointer;
 }
 
+/* Responsividad */
+@media (max-width: 768px) {
+    #visitorListTable {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  
+    #visitorListTable th,
+    #visitorListTable td {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    #visitorListTable th {
+      text-align: center;
+    }
+}
+  
+/* Mensajes de error */
 .error-msg {
     display: none;
     align-items: center;
@@ -162,17 +226,17 @@ section {
     border: 1px solid #fca5a5;
     border-radius: 6px;
 }
-
+  
 .error-msg.active {
     display: flex;
 }
-
-/* Pie de página con línea divisoria */
+  
+/* Footer pegado a la tabla dinámica */
 footer {
     text-align: center;
-    margin-top: 30px;
     font-size: 14px;
     color: #777;
-    border-top: 1px solid #eee;
-    padding-top: 15px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
 }
